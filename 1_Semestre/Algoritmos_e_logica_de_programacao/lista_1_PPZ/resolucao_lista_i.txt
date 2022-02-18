@@ -1,0 +1,59 @@
+# Nome: Leandro Aquino Teixeira de Sá
+# Curso: Análise e Desenvolvimento de Sistemas
+# RA: 1460482211022
+
+# Resolução - Lista I
+
+# Exercício 01
+n1 = int(input('Por favor, digite o primeiro número inteiro: '))
+n2 = int(input('Por favor, digite o segundo número inteiro: '))
+print('O resultado da soma entre estes dois números é: ' + str(n1 + n2))
+
+# Exercício 02
+meters = input('Digite o valor, em metros, que deseja converter em milímetros: ')
+print('O valor convertido é ' + str(float(meters)*1000) + ' mm')
+
+# Exercício 03
+days = int(input('Digite a quantidade de dias: ')) * 24 * 60 * 60
+hours = int(input('Digite a quantidade de horas: ')) * 60 * 60
+minutes = int(input('Digite a quantidade de minutos: ')) * 60
+seconds = int(input('Digite a quantidade de segundos: '))
+print(f'O total corresponde à {(days + hours + minutes + seconds)} segundos')
+
+# Exercício 04
+salary = float(input('Digite o valor do salário: '))
+raisePercentage = float(input('Digite a porcentagem do aumento: ')) / 100
+print(f'O salário aumentado foi para R$ {(salary * (1 + raisePercentage)):.2f}')
+
+# Exercício 05
+productValue = float(input('Digite o valor da mercadoria: '))
+discountPercentage = float(input('Digite o percentual de desconto: ')) / 100
+print(f'O valor da mercadoria com desconto é de R$ {(productValue * (1 - discountPercentage)):.2f}')
+
+# Exercício 06
+distance = float(input('Qual a distância a ser percorrida? (Km) '))
+averageSpeed = float(input('Qual a velocidade média esperada para a viagem? (Km/h) '))
+travelTime = distance / averageSpeed
+print(f'O tempo estimado para a viagem é de aproximadamente {travelTime:.2f} horas')
+
+# Exercício 07
+temperature = float(input('Digite a temperatura em graus celsius: '))
+print(f'O valor em Fahrenheit é de {((temperature * 9 / 5) + 32):.2f} ºF')
+
+# Exercício 08
+temperature = float(input('Digite a temperatura em graus Fahrenheit: '))
+print(f'O valor em graus Celsius é de {((temperature - 32) * 5 / 9):.2f} ºC')
+
+# Exercício 09
+km = float(input('Qual a quantidade de quilômetros percorridos? '))
+days = float(input('Por quantos dias o carro foi alugado? '))
+print(f'O preço a pagar é de R$ {((km * 0.15 + 60 * days) ):.2f}')
+
+# Exercício 10
+cigarsPerDay = int(input('Quantos cigarros por dia você fuma? '))
+yearsSomoking = int(input('Por quantos anos você já fumou? '))
+print(f'Você perdeu {(yearsSomoking * 365 * cigarsPerDay * 10 / 60 / 24):.2f} dias de vida ao fumar')
+
+# Exercício 11
+numberToConvert = str(2 ** 1000000)
+print(f'O número possui {len(numberToConvert)} caracteres')

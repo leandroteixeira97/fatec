@@ -1,0 +1,74 @@
+# Nome: Leandro Aquino Teixeira de Sá
+# Curso: Análise e Desenvolvimento de Sistemas
+# RA: 1460482211022
+
+# Resolução - Lista II
+
+# Exercício 01
+a = float(input('Digite o primeiro lado do triângulo: '))
+b = float(input('Digite o segundo lado do triângulo: '))
+c = float(input('Digite o terceiro lado do triângulo: '))
+if (abs(a-b) < c < (a+b)) and (abs(a-c) < b < (a+c)) and (abs(b-c) < a < (b+c)):
+    if a==b and b==c:
+        print('Este é um triângulo equilátero')
+    elif a==b or b==c:
+        print('Este é um triângulo isósceles')
+    else:
+        print('Este é um triângulo escaleno')
+else:
+    print('Os dados informados não constituem um triângulo possível')
+
+# Exercício 02
+year = int(input('Digite o ano: '))
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print('O ano é bissexto')
+        else:
+            print('O ano não é bissexto')
+    else:
+        print('O ano é bissexto')
+else:
+    print('O ano não é bissexto')
+
+# Exercício 03
+fishWeight = float(input('Digite a quantidade de quilos pescada: '))
+weightExcess = fishWeight - 50
+if weightExcess <= 0:
+    print(f'Quantidade pescada: {fishWeight} kg \nValor do excesso de peso: 0 kg \nValor da multa: R$ 0,00')
+else:
+    fee = weightExcess * 4
+    print(f'Quantidade pescada: {fishWeight} kg \nValor do excesso de peso: {weightExcess} kg \nValor da multa: R$ {fee:.2f}')
+
+# Exercício 04
+n1 = float(input('Digite o primeiro número: '))
+n2 = float(input('Digite o segundo número: '))
+n3 = float(input('Digite o terceiro número: '))
+print(f'O maior número é {max(n1, n2, n3)}')
+
+# Exercício 05
+n1 = float(input('Digite o primeiro número: '))
+n2 = float(input('Digite o segundo número: '))
+n3 = float(input('Digite o terceiro número: '))
+print(f'O maior número é {max(n1, n2, n3)}\nO menor número é {min(n1, n2, n3)}')
+
+# Exercício 06
+salaryPerHour = float(input('Digite o seu salário por hora: '))
+workHours = float(input('Digite a quantidade de horas trabalhadas no mês: '))
+netSalary = salaryPerHour * workHours
+print(f'Salário Bruto: R$ {netSalary:.2f}\nIR (11%): R$ {(netSalary * 0.11):.2f}\nINSS (8%): R$ {(netSalary * 0.08):.2f}\nSindicato (5%): R$ {(netSalary * 0.05):.2f}\nSalário Liquido: R$ {(netSalary * 0.76):.2f}')
+
+# Exercício 07
+from math import ceil
+paintArea = float(input('Digite em m² a área a ser pintada: '))
+inkAmount = ceil(paintArea / 3)
+if inkAmount % 18 == 0:
+    print(f'Quantidade de latas de tinta a serem compradas: {int(inkAmount / 18)}\nPreço total: R$ {(inkAmount / 18 * 80):.2f}')
+else:
+    if inkAmount < 18:
+        inkAmount = 18
+        print(f'Quantidade de latas de tinta a serem compradas: {int(inkAmount / 18)}\nPreço total: R$ {(inkAmount / 18 * 80):.2f}')
+    else:
+        inkAmount = ceil(inkAmount / 18)
+        print(f'Quantidade de latas de tinta a serem compradas: {int(inkAmount)}\nPreço total: R$ {(inkAmount * 80):.2f}')
+
