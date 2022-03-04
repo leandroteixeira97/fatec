@@ -1,0 +1,68 @@
+# Nome: Leandro Aquino Teixeira de Sá
+# Curso: Análise e Desenvolvimento de Sistemas
+# RA: 1460482211022
+
+# Resolução - Lista III
+
+# Exercício 01
+x = float(input('Digite uma nota, de 0 a 10: '))
+
+while x<0 or x>10:
+    x = float(input('Por favor, digite um valor compreendido entre 0 e 10: '))
+    
+print(f'A nota informada foi {x:.2f}')
+
+# Exercício 02
+username = input('Digite o nome do usuário: ')
+password = input('Digite a senha: ')
+
+while username == password:
+    print('ERRO! Usuário deve ser diferente da senha!')
+    username = input('Digite o nome do usuário: ')
+    password = input('Digite a senha: ')
+         
+print(f'Usuário: {username}\nSenha: {password}')
+
+# Exercício 03
+populationA = 80000
+populationB = 200000
+
+growthRateA = 0.03
+growthRateB = 0.015
+
+years = 0
+
+while populationA <= populationB:
+    years += 1
+    populationA = populationA + populationA*growthRateA
+    populationB = populationB + populationB*growthRateB
+
+print(f'A população do país A ultrapassou o país B\nPopulação do país A: {populationA:.0f}\nPopulação do país B: {populationB:.0f}\nAnos necessários: {years}')
+
+# Exercício 04
+number = int(input('Digite um número inteiro: '))
+
+a = 1
+b = 1
+c = 0
+fibonacci = 0
+
+if number == 1 or number == 2:
+    print(f'O correspondente de {number} na sequência de Fibonacci é 1')
+else:
+    while c < number:
+        a, b = b, a + b
+        fibonacci = b
+        c += 1
+    print(f'A posição {number} na sequência de Fibonacci corresponde ao valor {fibonacci}')
+
+# Exercício 05
+n1 = int(input('Digite o primeiro número: '))
+n2 = int(input('Digite o segundo número: '))
+rest = 1
+
+while rest > 0:
+  n1, n2 = n2, n1 % n2
+  rest = n2
+
+print(f'O máximo divisor comum entre os dois números é {n1}')
