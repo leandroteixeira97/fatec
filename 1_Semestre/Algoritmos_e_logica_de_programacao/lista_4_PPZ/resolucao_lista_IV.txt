@@ -1,0 +1,89 @@
+# Nome: Leandro Aquino Teixeira de Sá
+# Curso: Análise e Desenvolvimento de Sistemas
+# RA: 1460482211022
+
+# Resolução - Lista IV
+
+# Exercício 01
+import random
+
+v = random.sample(range(100), 10)
+
+max = v[9]
+min = v[0]
+
+for pos in v:
+    if pos > max:
+        max = pos
+    if pos < min:
+        min = pos
+
+print(v)
+print(f'Máximo: {max}\nMínimo: {min}')
+
+
+# Exercício 02
+import random
+
+v = random.sample(range(100), 20)
+
+par = []
+impar = []
+
+for pos in v:
+    if (pos % 2) == 0:
+        par.append(pos)
+    else:
+        impar.append(pos)
+
+print(v)
+print(par)
+print(impar)
+
+
+# Exercício 03
+import random
+
+v1 = random.sample(range(100), 10)
+v2 = random.sample(range(100), 10)
+v3 = []
+
+for pos in range(10):
+    v3.append(v1[pos])
+    v3.append(v2[pos])
+           
+print(v1)
+print(v2)
+print(v3)
+
+
+# Exercício 04
+text = '''
+The Python Software Foundation and the global Python community welcome and encourage participation by everyone. Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles. We want our community to be more diverse: whoever you are, and whatever your background, we welcome you.
+'''.split()
+newText = []
+
+for pos in text:
+    p = list(pos)
+    if p[0] in 'python' or p[0] in 'PYTHON' or p[len(p)-1] in 'python' or p[len(p)-1] in 'PYTHON':
+        newText.append(pos)
+print(newText)
+
+
+# Exercício 05
+text = '''
+The Python Software Foundation and the global Python community welcome and encourage participation by everyone. Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles. We want our community to be more diverse: whoever you are, and whatever your background, we welcome you.
+'''.lower().split()
+
+newText = []
+
+for pos in text:
+  word = list(pos)
+  if len(word) > 4:
+    for letter in word:
+      if letter in 'python':
+        newText.append(pos)
+        break
+
+print(f'{len(newText)} palavras')
+print(newText)
