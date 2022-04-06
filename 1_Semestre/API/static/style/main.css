@@ -1,92 +1,63 @@
-body {
-  margin: 0px;
-  padding: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+.my-navbar {
+    background-color: #038c3e;
 }
 
-.header {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #038c3e;
-  align-items: center;
-  padding: 20px;
+.my-footer {
+    background-color: #038c3e;
 }
 
-.header ul {
-  display: flex;
-  list-style: none;
-  margin: 0px;
+.social-media-logos {
+    margin: 0px 15px;
+    width: 24px;
 }
 
-.header ul a {
-  text-decoration: none;
-  color: white;
+.conteudo {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.header ul a:hover{
-  transition: .2s;
-  color: #d9d5d2;
+.foto-mulher {
+    width: 100%;
 }
 
-.header ul li {
-  margin: 0px 10px;
-  font-size:15px;
+.coluna-esquerda {
+    width: 50%;
 }
 
-.header img {
-  width: 160px;
+.coluna-direita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    background-color: #d9d5d2;
 }
 
-.content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  margin: 0px;
+.coluna-direita h2, h3 {
+    text-shadow: #707070 1px 1px 2px;
+    color: #038c3e;
+    margin: 40px;
 }
 
-.content div {
-  width: 50%;
-}
-.content div img {
-  width: 100%;
+.coluna-direita p {
+    margin: 40px;
+    text-align: justify;
 }
 
-.footer {
-  background-color: #038c3e;
-  color: white;
-  display: flex;
-  font-size: 15px;
-  justify-content: space-between;
-  align-items: center;
-  height: 130px;
+.coluna-direita div ol {
+    font-weight: bolder;
+    margin: 30px;
 }
 
-.footer ul {
-  list-style: none;
-}
+@media only screen and (max-width: 1000px) {
+    .conteudo {
+        flex-direction: column;
+    }
 
-.footer ul li a img{
-  width: 25px;
-}
-
-.redes-sociais ul {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  margin: 20px;
-}
-
-.redes-sociais ul li {
-  margin-left: 10px;
-}
-
-.direitos {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  align-content: flex-end;
+    .coluna-direita, .coluna-esquerda {
+        width: 100%;
+    }
 }
